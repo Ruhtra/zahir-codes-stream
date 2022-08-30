@@ -1,0 +1,10 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#white, #blue, #pink {
+	display: none;
+}
+#blue {
+	display: block;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #white, #blue, #pink {
+            display: none;
+        }
+        #blue {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <video id="blue" loop autoplay muted><source src="http://localhost:3000/movies/javolto/blue.webm" type="video/webm"></video>
+    <video id="white" loop autoplay muted><source src="http://localhost:3000/movies/javolto/white.webm" type="video/webm"></video>
+    <video id="pink" loop autoplay muted><source src="http://localhost:3000/movies/javolto/pink.webm" type="video/webm"></video>
+
+    <script>
+        const show = {
+            blue: () => {
+                window.document.querySelector('#blue').style.display = 'block'
+                window.document.querySelector('#white').style.display = 'none'
+                window.document.querySelector('#pink').style.display = 'none'
+            },
+            white: () => {
+                window.document.querySelector('#blue').style.display = 'none'
+                window.document.querySelector('#white').style.display = 'block'
+                window.document.querySelector('#pink').style.display = 'none'
+            },
+            pink: () => {
+                window.document.querySelector('#blue').style.display = 'none'
+                window.document.querySelector('#white').style.display = 'none'
+                window.document.querySelector('#pink').style.display = 'block'
+            }
+        }
+
+        const socket = io('http://localhost:3000', { transports : ['websocket'] })
+        socket.on('connect', () => {
+            console.log('connect')
+        });
+
+        socket.on('change_blue', () => { show.blue() })
+        socket.on('change_white', () => { show.white() })
+        socket.on('change_pink', () => { show.pink() })
+
+        socket.emit('get_color')
+        socket.on('get_res', (data) => {
+            console.log(data)
+            switch(data) {
+                case 'blue': show.blue(); break
+                case 'white': show.white(); break
+                case 'pink': show.pink(); break
+            }
+        })
+    </script>
+</body>
+</html>

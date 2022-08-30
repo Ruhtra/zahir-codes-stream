@@ -1,0 +1,33 @@
+{
+  "name": "streamelements-overlay-zahir",
+  "version": "1.0.0",
+  "description": "Overlay Zahir",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "bin": "main.js",
+  "pkg": {
+    "assets": [
+      "node_modules/socket.io/client-dist/*.js",
+      "html/**/*"
+    ],
+    "targets": ["node16-win-x64"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruhtra/StreamElements-overlay-zahir.git"
+  },
+  "author": "Ruhtra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1",
+    "tmi.js": "^1.8.5"
+  },
+  "bugs": {
+    "url": "https://github.com/Ruhtra/StreamElements-overlay-zahir/issues"
+  },
+  "homepage": "https://github.com/Ruhtra/StreamElements-overlay-zahir#readme"
+}

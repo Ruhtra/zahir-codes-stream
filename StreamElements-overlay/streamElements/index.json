@@ -1,0 +1,14 @@
+{
+  "overlay": {
+    "type": "dropdown",
+    "label": "Overlay:",
+    "value": "intermission",
+    "options": {
+      "intermission": "Itermission",
+      "javolto": "Javolto",
+      "start": "Start",
+      "mobile": "Mobile",
+      "justchatting": "Just Chatting"
+    }
+  }
+}
