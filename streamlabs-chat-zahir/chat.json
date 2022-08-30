@@ -1,0 +1,74 @@
+{
+    "fontFamily": {
+        "type": "textfield",
+        "label": "Font name",
+        "value": "Open Sans",
+        "group": "Typography"
+    },
+    "nickColor": {
+        "type": "colorpicker",
+        "label": "Custom nickname color",
+        "value": "rgb(16, 214, 214)",
+        "group": "Typography"
+    },
+    "nameSize": {
+        "type": "slider",
+        "label": "Font size nick",
+        "value": 18,
+        "max": 50,
+        "min": 10,
+        "steps": 1,
+        "group": "Typography"
+    },
+    "textColor": {
+        "type": "colorpicker",
+        "label": "Font color text",
+        "value": "rgb(255,255,255)",
+        "group": "Typography"
+    },
+    "textSize": {
+        "type": "slider",
+        "label": "Font size text",
+        "value": 20,
+        "max": 50,
+        "min": 10,
+        "steps": 1,
+        "group": "Typography"
+    },
+    "textTransform": {
+        "type": "dropdown",
+        "label": "UpperCase nick",
+        "value": "uppercase",
+        "options": {
+            "uppercase": "Yes",
+            "none": "No"
+        },
+        "group": "Typography"
+    },
+    "alignMessages": {
+        "label": "Align Messages",
+        "type": "dropdown",
+        "value": "column",
+        "options": {
+            "column": "Bottom",
+            "column-reverse": "Top"
+        },
+        "group": "Typography"
+    },
+    "widgetName": {
+        "type": "hidden",
+        "value": "Custom chat"
+    },
+    "widgetAuthor": {
+        "type": "hidden",
+        "value": "Ruhtra"
+    },
+    "widgetVersion": {
+        "type": "hidden",
+        "value": "1.0"
+    },
+    "widgetUpdateUrl": {
+        "type": "hidden",
+        "value": "https://github.com/Ruhtra/"
+    }
+}

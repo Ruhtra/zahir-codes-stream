@@ -1,0 +1,25 @@
+{
+  "alertDuration": {
+    "type": "slider",
+    "label": "Alert Duration",
+    "value": 10,
+    "min": 8,
+    "max": 90,
+    "steps": 1
+  },
+   "barColor": {
+    "type": "colorpicker",
+    "label": "Bar color",
+    "value": "rgb(0,255,255)"
+  },
+   "barMessage": {
+    "type": "text",
+    "label": "Message in donate",
+    "value": "Acabou de mandar"
+  },
+   "barTextColor": {
+    "type": "colorpicker",
+    "label": "Text color in bar",
+    "value": "rgb(35, 35, 35)"
+  }
+}

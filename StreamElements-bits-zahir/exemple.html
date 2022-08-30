@@ -1,0 +1,121 @@
+<style>
+@import url('https://cdn.streamelements.com/scripts/animate.min.css');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+:root {
+    --bar-color: #0ff;
+    --text-color: rgb(54, 54, 54);
+}
+body {background: black;}
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.text-containter {
+    position: relative;
+}
+.image-container {
+    position: absolute;
+    height: 100%;
+    max-height: 80%;
+}
+.image-container video {
+    height: 100%;
+    max-height: 100%;
+}
+.box-name {
+    position: absolute;
+    top: 47%;
+    left: 43%;
+    width: 24%;
+
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 700;
+    text-shadow: 0 0 10px white;
+    color: white;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    opacity: 0;
+    transition: 1s opacity;
+}
+.box-name .name {font-size: 140%;}
+
+.bar {
+  position: absolute;
+  top: 64%;
+  left: 42%;
+
+  background-color: 0ff;
+  background-color: red;
+  width: 0;
+  height: 0;
+  opacity: 0;
+
+  border-radius: 2em;
+  animation: bar-width 5s forwards 1.25s 1 alternate;
+  transition: 1s opacity;
+  
+  box-shadow: 0px 0px 2vh 2vh var(--bar-color);
+  z-index: -1;
+}
+.bar div {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    font-size: 4vh;
+    white-space: nowrap;
+    transform: translateY(-45%);
+    font-weight: 800;
+    color: var(--text-color);
+}
+.bar .message {
+    margin: 0 2vh 0 2vh;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+}
+@keyframes bar-width {
+  from {width: 0;}
+  to {width: 39%;}
+}
+
+
+</style>
+<div class="text-container">
+    <div class="image-container">
+	<video autoplay muted src="https://cdn.streamelements.com/uploads/681d229d-9755-4303-9ee6-fc7a8d5d4805.webm"></video>
+        <div class='bar'><div><p class='message'>Acabou de mandar</p><p class='amount'>X5000</p> </div></div>
+    	<div class='box-name'><span class='name'>Ruh7ralanfo</span></div>
+	
+    <div> <p> {{message}} </p> </div>
+    </div>
+</div>
+<script>
+  const movie = window.document.querySelector('div.image-container video')
+  const name  = window.document.querySelector('.box-name')
+  const bar   = window.document.querySelector('.bar')
+  var timeDuration = 10 // min 6 seconds
+  
+  function sleep(milliseconds) { return new Promise(resolve => setTimeout(resolve, milliseconds)) }
+
+  console.log(window.document.querySelector('.image-container'))
+  async function main() {
+    setTimeout(()=> {
+        //name.style.opacity = 0
+        //bar.style.opacity = 0
+    }, timeDuration*1000 - 500)
+    await sleep(1250)
+    name.style.opacity = 1
+    bar.style.opacity = 1
+    await sleep(750)
+
+    movie.pause()
+    await sleep(timeDuration*1000 - 6000)
+    //movie.play()
+  }
+  main();
+</script>
