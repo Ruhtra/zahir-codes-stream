@@ -1,1 +1,12 @@
-{"PORT":3000,"channels":["#ruh7ra"],"lastColor":"blue"}
+{
+	"PORT":3000,
+	"channels":["#ruh7ra"],
+	"lastColor":"blue",
+
+	"prefix": "!",
+	"commands": {
+		"cmdPink": "rosa",
+		"cmdBlue": "azul",
+		"cmdWhite": "branco"
+	}
+}

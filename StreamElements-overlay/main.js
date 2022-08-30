@@ -3,7 +3,6 @@
     const path = require('path')
     const tmi = require('tmi.js');
     // Get config
-    //var config;
 	const config = JSON.parse(fs.readFileSync("./config.json", "utf8"))
         const PORT = config['PORT'] || 8080
         const channels = config['channels']
@@ -11,8 +10,6 @@
         const express = require("express")
         const app = express()
         const server = require('http').createServer(app)
-
-// Start tmi ~ twitch
 
 // Config server
     app.use(express.static('public'))
@@ -52,11 +49,11 @@
     client.on('message', (channel, tags, message, self) => {
         if (!self) {
             var cmdSplited = message.trim().split(' ').filter(e => e)
-            if (cmdSplited[0][0] == '!') {
+            if (cmdSplited[0][0] == config['prefix']) {
                 switch (cmdSplited[0].substring(1)) {
-                    case 'blue':   change('blue'); break
-                    case 'white':  change('white');  break
-                    case 'pink':   change('pink'); break
+                    case config.commands['cmdBlue']:   change('blue'); break
+                    case config.commands['cmdWhite']:  change('white');  break
+                    case config.commands['cmdPink']:   change('pink'); break
                     default:
                         console.log(' .Incorrect command');
                 }

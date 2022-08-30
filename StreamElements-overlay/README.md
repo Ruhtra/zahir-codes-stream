@@ -10,6 +10,8 @@ Overlay para streamElements
  Para configurar o app, é necessário alterar as informações no arquivo **"config.json"**  
    + **PORT** -> Porta que o servido vai iniciar | _Valor padrão 3000_  
    + **Channels** -> Lista de canais que ele irá receber mensagens do chat  
+   + **Prefix** -> Simbolo que será usado para identificação do comando  
+   + **commands** -> Nome dos comandos
      
 Paths de aesso das overlays
 * /intermission
