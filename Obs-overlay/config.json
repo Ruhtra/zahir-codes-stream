@@ -1,0 +1,27 @@
+{
+    "channels": [
+        "#ruh7ra"
+    ],
+    "password": "PU01usW2XRaBnwRb",
+
+    "lastColor": "blue",
+    "colors": [
+        "white",
+        "pink",
+        "blue"
+    ],
+    "scenesMovies": [
+        "Justchatting",
+        "Mobile",
+        "Intermission",
+        "Javolto",
+        "Start"
+    ],
+
+    "prefix": "!",
+    "commands": {
+        "cmdPink": "rosa",
+        "cmdBlue": "azul",
+        "cmdWhite": "branco"
+    }
+}
