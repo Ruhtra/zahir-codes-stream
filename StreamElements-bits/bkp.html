@@ -83,35 +83,6 @@ body {background: black;}
   to {width: 39%;}
 }
 
-div.messa {
-    text-align: justify;
-    padding: 6% 1%  1% 1%;
-    box-sizing: border-box;
-    position: absolute;
-    z-index: -2;
-    top: 60%;
-    left: 40%;
-    width: 44%;
-    height: auto;
-    background: #1c1c1c;
-    border: 2px solid white;
-    border-radius: 20px;
-    border-top: 0;
-    box-shadow: 0 0 30px black inset;
-    opacity: 0;
-    transition: 1s opacity;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-size: 2.2vh;
-}
-span#message_user {
-    font-size: 100%;
-    color: white;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical;
-}
 
 </style>
 <div class="text-container">
@@ -121,17 +92,12 @@ span#message_user {
     	<div class='box-name'><span class='name'>Ruh7ralanfo</span></div>
 	
     <div> <p> {{message}} </p> </div>
-    <div class="messa">
-         <span id="message_user">Teste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagemTeste de uma mesnsagem teste de uma mensagem teste de uma mensagem</span>
-    </div>
-
     </div>
 </div>
 <script>
   const movie = window.document.querySelector('div.image-container video')
   const name  = window.document.querySelector('.box-name')
   const bar   = window.document.querySelector('.bar')
-  const mes   = window.document.querySelector('.messa')
   var timeDuration = 10 // min 6 seconds
   
   function sleep(milliseconds) { return new Promise(resolve => setTimeout(resolve, milliseconds)) }
@@ -145,7 +111,6 @@ span#message_user {
     await sleep(1250)
     name.style.opacity = 1
     bar.style.opacity = 1
-    mes.style.opacity = 1
     await sleep(750)
 
     movie.pause()
