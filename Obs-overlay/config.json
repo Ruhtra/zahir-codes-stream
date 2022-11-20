@@ -1,8 +1,8 @@
 {
     "channels": [
-        "#ruh7ra"
+        "[Your channel name]"
     ],
-    "password": "PU01usW2XRaBnwRb",
+    "password": "[Your password remote-obs]",
 
     "lastColor": "blue",
     "colors": [
@@ -17,6 +17,10 @@
         "Javolto",
         "Start"
     ],
+    "links": {
+        "Alert": "[Your link for alert in streamlabs]",
+        "Chat": "[Your link for chat in streamlabs]"
+    },
 
     "prefix": "!",
     "commands": {

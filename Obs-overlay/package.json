@@ -1,15 +1,28 @@
 {
-  "name": "project",
+  "name": "obs-overlay",
   "version": "1.0.0",
-  "description": "",
+  "description": "Overlay Zahir",
   "main": "main.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node main.js"
+  },
+  "bin": "main.js",
+  "pkg": {
+    "targets": ["node16-win-x64"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruhtra/zahir-codes-stream.git"
   },
   "author": "Ruhtra",
   "license": "ISC",
   "dependencies": {
     "obs-websocket-js": "^5.0.2",
     "tmi.js": "^1.8.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Ruhtra/zahir-codes-stream/issues"
+  },
+  "homepage": "https://github.com/Ruhtra/zahir-codes-stream#readme"
 }
