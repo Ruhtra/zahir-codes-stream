@@ -1,9 +1,8 @@
 {
     "channels": [
-        "[Your channel name]"
+        ""
     ],
-    "password": "[Your password remote-obs]",
-
+    "password": "",
     "lastColor": "blue",
     "colors": [
         "white",
@@ -18,10 +17,9 @@
         "Start"
     ],
     "links": {
-        "Alert": "[Your link for alert in streamlabs]",
-        "Chat": "[Your link for chat in streamlabs]"
+        "Alert": "",
+        "Chat": ""
     },
-
     "prefix": "!",
     "commands": {
         "cmdPink": "rosa",

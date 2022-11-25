@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <title>Application Zahir</title>
+      <!-- <https://electronjs.org/docs/tutorial/security#csp-meta-tag> -->
+      <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+        <!-- We are using node <script>document.write(versions.node())</script> -->
+      <main>
+        <section class="title">
+          <h1>Controle configuração Obs</h1>
+        </section>
+        <section class="opt">
+          <h2>Options: </h2>
+          <div id="buttons">
+            <input type="button" id="configuration" onclick="config.open(this.value)" value="Configuration">
+            <input type="button" id="scene" onclick="createCollection()" value="Create Scene">
+            <input type="button" id="restart" onclick="restart()" value="Restart Application">
+          </div>
+        </section>
+        <section class="log">
+          <h2>Log: </h2>
+          <div id="log">
+            <div>
+              <!-- <div class="msg">[ON] > q</div>
+              <div class="msg">[ON] > ter</div>
+              <div class="msg">[ON] > sect</div>
+              <div class="msg">[ON] > first</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > gNE</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > OfNE</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > gNE</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > OfNE</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > ONLINE</div>
+              <div class="msg">[ON] > inv</div>
+              <div class="msg">[ON] > algum</div>
+              <div class="msg">[ON] > last</div>
+              <div class="msg">[ON] > algum</div>
+              <div class="msg">[ON] > lastsssssssssss</div> -->
+            </div>
+          </div>
+        </section>
+      </main>
+      <section class="screen" style="display: none;">
+        <div class="center">
+          <div id="name">
+            <hgroup>
+              <label for="name">Nickname Twitch</label>
+              <input type="text" name="name" placeholder="">
+            </hgroup>
+          </div>
+          <div id="pass">
+            <hgroup>
+              <label for="pass">Password Remote OBS</label>
+              <input type="text" name="pass" placeholder="">
+            </hgroup>
+          </div>
+          <div id="commands">
+            <h2>Commands</h2>
+            <div class="inputs">
+              <hgroup>
+                <label for="prefix">Prefix</label>
+                <input type="text" name="prefix" placeholder="">
+              </hgroup>
+              <hgroup>
+                <label for="blue">Blue</label>
+                <input type="text" name="blue" placeholder="">
+              </hgroup>
+              <hgroup>
+                <label for="white">White</label>
+                <input type="text" name="white" placeholder="">
+              </hgroup>
+              <hgroup>
+                <label for="pink">Pink</label>
+                <input type="text" name="pink" placeholder="">
+              </hgroup>
+            </div>
+          </div>
+          <div id="links">
+            <h2>Links Streamlabs</h2>
+            <div class="inputs">
+              <hgroup>
+                <label for="alert">Alert</label>
+                <input type="text" name="alert" placeholder="">
+              </hgroup>
+              <hgroup>
+                <label for="chat">Chat</label>
+                <input type="text" name="chat" placeholder="">
+              </hgroup>
+            </div>
+          </div>
+          <div>
+            <div id="buttons">
+              <input type="button" class="cancel" onclick="config.close()" value="Cancel">
+              <input type="button" class="okay" onclick="config.okay()" value="Ok">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="./main.js"></script>
+   </body>
+</html>

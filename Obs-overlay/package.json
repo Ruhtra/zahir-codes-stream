@@ -1,15 +1,11 @@
 {
   "name": "obs-overlay",
-  "version": "1.0.0",
-  "description": "Overlay Zahir",
+  "version": "2.0.0",
+  "description": "App overlay Zahir",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
-  },
-  "bin": "main.js",
-  "pkg": {
-    "targets": ["node16-win-x64"]
+    "start": "electron main.js",
+    "build": "npx electron-packager . appZahir --asar --overwrite --platform=win32 --arch=ia32 --prune=true --out=release-builds --extra-resource=config.json --extra-resource=movies"
   },
   "repository": {
     "type": "git",
@@ -17,6 +13,11 @@
   },
   "author": "Ruhtra",
   "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.2.3",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-packager": "^17.1.1"
+  },
   "dependencies": {
     "obs-websocket-js": "^5.0.2",
     "tmi.js": "^1.8.5"
